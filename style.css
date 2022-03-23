@@ -30,16 +30,16 @@ nav {
 }
 
 nav p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 nav h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 nav > div {
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 48px 1fr;
     gap: 16px;
     align-items: center;
     margin-bottom: 16px;
@@ -60,10 +60,98 @@ nav img {
 header {
     grid-column: 2;
     grid-row: 1;
+    padding: 8px 128px 8px 64px;
+    font-weight: 700;
 }
 
 main {
     grid-column: 2;
     grid-row: 2;
     background-color: #eef2ff;
+}
+
+header .upper {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.search-bar {
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    align-items: center;
+}
+
+.user-options {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+input[type="search"] {
+    flex: 1;
+    margin-right: 96px;
+    border-radius: 14px;
+    border: none;
+    padding: 4px 8px;
+    max-width: 700px;
+    background-color: #eef2ff;
+    font-size: 1.2rem;
+}
+
+header .lower {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.current-user {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    grid-template-rows: 2fr 3fr;
+    gap: 8px;
+}
+
+.current-user img {
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+.current-user p:nth-child(2) {
+    align-self: flex-end;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.current-user p:nth-child(3) {
+    grid-column: 2;
+    grid-row: -2;
+    font-size: 1.4rem;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.options button {
+    padding: 12px 0;
+    width: 112px;
+    font-size: 1rem;
+    border-radius: 32px;
+    border: none;
+    background-color: #6366f1;
+    color: white;
+    font-weight: 700;
+}
+
+button:active {
+    position: relative;
+    left: 1px;
+    top: 1px;
 }
