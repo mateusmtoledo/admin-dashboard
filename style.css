@@ -15,9 +15,13 @@
     grid-template-rows: 160px 1fr;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 nav a {
     color: white;
-    text-decoration: none;
 }
 
 nav {
@@ -50,17 +54,18 @@ nav > div {
 }
 
 .nav-item6 {
-    margin-bottom: 48px;
+    margin-bottom: 64px;
 }
 
 nav img {
     justify-self: center;
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(27deg) brightness(117%) contrast(101%);
 }
 
 header {
     grid-column: 2;
     grid-row: 1;
-    padding: 8px 128px 8px 64px;
+    padding: 8px 64px 8px 64px;
     font-weight: 700;
 }
 
@@ -94,13 +99,18 @@ header .upper {
 
 input[type="search"] {
     flex: 1;
+    height: 28px;
     margin-right: 96px;
     border-radius: 14px;
     border: none;
     padding: 4px 8px;
     max-width: 700px;
     background-color: #eef2ff;
-    font-size: 1.2rem;
+    font-size: 1rem;
+}
+
+input[type="search"]:focus {
+    outline: 1px outset #6365f19a;
 }
 
 header .lower {
@@ -203,6 +213,7 @@ h5 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
+    height: 92%;
 }
 
 .card {
@@ -214,6 +225,7 @@ h5 {
     justify-content: space-between;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-left: 8px solid #22c55e;
 }
 
 .projects .card {
@@ -264,4 +276,9 @@ hr {
 
 .trend:last-child {
     margin-bottom: 0;
+}
+
+.trending img,
+header img {
+    border-radius: 100%;
 }
